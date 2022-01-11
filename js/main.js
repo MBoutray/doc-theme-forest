@@ -1,5 +1,6 @@
 let navLinks = document.querySelectorAll("ul.navbar-nav a")
 let sections = document.querySelectorAll("main > div > section")
+let button = document.querySelector('button.navbar-toggler')
 
 // initialisation
 sections.item(0).classList.add('current')
@@ -22,6 +23,9 @@ let changeTab = function (link) {
     currentSection.classList.add('current')
     currentSection.setAttribute('aria-hidden', false)
 
+    if (window.innerWidth < 768) {
+        button.click()
+    }
     currentSection.focus()
 }
 
