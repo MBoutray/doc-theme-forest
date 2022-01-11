@@ -1,0 +1,48 @@
+:root {
+    --mobile-bp: 768px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+main {
+    height: 100vh;
+    overflow: auto;
+}
+
+main > .container-fluid > section {
+    display: none;
+    padding-top: 4rem;
+}
+
+section.current {
+    display: block !important;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: clamp(15rem, 20%, 25rem) 1fr;
+    }
+
+    header.main-header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav.navbar {
+        position: unset;
+        align-items: flex-start;
+        flex-grow: 1;
+    }
+
+    ul.navbar-nav {
+        flex-direction: column !important;
+    }
+
+    main > .container-fluid > section {
+        padding-top: 0;
+    }
+}
