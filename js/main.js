@@ -1,14 +1,21 @@
-let navLinks = document.querySelectorAll("a[href^='#']")
+let navLinks = document.querySelectorAll("ul.navbar-nav a")
+let links = document.querySelectorAll("a[href^='#']")
 let sections = document.querySelectorAll("main > div > section")
 let button = document.querySelector('button.navbar-toggler')
 
-// initialisation
-sections.item(0).classList.add('current')
-sections.forEach(function (el) {
-    el.setAttribute('aria-hidden', true)
-    el.setAttribute('tabindex', -1)
-})
-sections.item(0).setAttribute('aria-hidden', false)
+// Function to initialize the sections on page load based on the hash in the URI
+let initializeSections = function (startingTab = 0) {
+    // If there is no hash, default to the first tab
+    if (startingTab === -1) startingTab = 0
+
+    // set the starting attributes on the sections
+    sections.item(startingTab).classList.add('current')
+    sections.forEach(function (el) {
+        el.setAttribute('aria-hidden', true)
+        el.setAttribute('tabindex', -1)
+    })
+    sections.item(startingTab).setAttribute('aria-hidden', false)
+}
 
 // Function to change the visible section when clicking on the navbar links
 let changeTab = function (link) {
@@ -29,10 +36,19 @@ let changeTab = function (link) {
     currentSection.focus()
 }
 
-// Create an event listener for each navbar link to trigger the changeTab function
-navLinks.forEach(function (el) {
+// initialisation
+document.addEventListener('DOMContentLoaded', function () {
+    let windowHash = window.location.hash // Get the hashtag at the end of the URI
+    let startingSectionIndex = Array.from(navLinks).findIndex(function (el) { //Return the index of the nav link that corresponds to the hash
+        return el.hash === windowHash
+    })
+    initializeSections(startingSectionIndex) //Initialize using this index
+})
+
+
+// Create an event listener for each link to the tabs to trigger the changeTab function
+links.forEach(function (el) {
     el.addEventListener('click', function (event) {
-        event.preventDefault();
         changeTab(event.target)
     })
 })
