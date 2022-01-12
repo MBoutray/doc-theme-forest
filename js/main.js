@@ -1,4 +1,4 @@
-let navLinks = document.querySelectorAll("ul.navbar-nav a")
+let navLinks = document.querySelectorAll("a[href^='#']")
 let sections = document.querySelectorAll("main > div > section")
 let button = document.querySelector('button.navbar-toggler')
 
