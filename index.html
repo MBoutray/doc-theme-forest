@@ -158,29 +158,75 @@
             </section>
             <section id="css" class="page-section">
                 <h2>CSS</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At suscipit eligendi perspiciatis assumenda aliquam ab porro natus a consectetur beatae incidunt accusamus quo impedit laudantium asperiores, tempora, maxime ullam culpa!</p>
-                <p>Dolore inventore magnam libero? Nesciunt, fugiat! Molestiae minima ea consequuntur ab id harum libero, earum delectus quam repudiandae, ex ipsa quibusdam tenetur odio autem beatae facere et nobis nemo. Eum.</p>
-                <p>Maxime a reiciendis iure doloremque id officiis, voluptatem fugiat cum impedit? Quod explicabo, perferendis fugiat blanditiis id ex dignissimos odit nobis earum a quas est alias autem illo nesciunt neque!</p>
-                <p>Suscipit laudantium veniam iure hic quod repellat architecto harum minima, aperiam, porro dolores magnam nam maxime doloribus! Aliquid sit rerum vitae quibusdam officia harum, distinctio, cum odit eligendi adipisci ducimus.</p>
-                <p>Cumque, repellat, ducimus voluptas officia temporibus, in vitae voluptatibus asperiores veniam laudantium qui. Id accusamus architecto rem exercitationem! Culpa omnis veritatis ex doloribus, est vero blanditiis vel mollitia tenetur ullam.</p>
-                <p>Quidem provident voluptatibus dolor placeat minima recusandae. Fugiat et, soluta voluptate debitis omnis placeat minima minus repellat. Iure numquam, hic quia facilis vel rerum deleniti itaque. Expedita quia quas inventore?</p>
-                <p>Quas facere, dicta a blanditiis doloremque voluptatum, eveniet similique quasi obcaecati laudantium reprehenderit. Sint obcaecati perferendis dignissimos, neque fugit dolores eius error aliquam, ducimus maxime voluptate quod fuga laborum nemo?</p>
-                <p>Perferendis, delectus? Beatae est recusandae illum hic eaque sapiente reprehenderit vel perferendis nam eveniet, quas, totam eligendi, accusantium repellendus? Expedita repudiandae aperiam non corrupti optio numquam, earum cupiditate esse laboriosam.</p>
-                <p>Maiores quo ipsa illum ratione repudiandae possimus. Illo, commodi corrupti nisi mollitia perspiciatis neque voluptatem facere reprehenderit in officia, laudantium beatae, numquam saepe cumque magni totam nostrum. Sed, sequi nobis!</p>
-                <p>Ut molestias velit repudiandae dicta explicabo eius voluptatem soluta, consectetur est nisi sunt tempora iste odio? At mollitia voluptate commodi vel adipisci. Ipsa impedit asperiores veniam culpa sit repudiandae nemo.</p>
-                <p>Tempora placeat laborum error, nam exercitationem quidem qui facere laboriosam dolorum iusto harum illo, sapiente eum ratione, minus corporis dignissimos eveniet. Magnam veritatis libero officiis repudiandae, dolorem praesentium obcaecati molestias!</p>
-                <p>Debitis maxime repudiandae inventore deleniti rem similique optio ullam quod nisi. Quis, veritatis neque! Itaque ullam nemo quisquam, vel sint libero culpa doloribus consequuntur ab, maxime porro quibusdam amet consectetur?</p>
-                <p>Totam earum laboriosam ducimus in blanditiis incidunt, minus suscipit libero voluptates, maxime quidem sunt cumque perferendis! Obcaecati ratione quaerat quibusdam, consectetur, quae doloremque culpa accusantium, cumque suscipit enim id voluptates!</p>
-                <p>Ex molestias consequatur, ad itaque a harum facere doloribus natus facilis aut fugiat vel magnam quidem libero, quod deserunt cum nihil minima odit? Nostrum facere, nobis aut excepturi alias velit!</p>
-                <p>Ab magnam reiciendis praesentium officia aperiam consequuntur itaque? Inventore blanditiis aliquam, iste earum qui similique deserunt. Nobis porro non amet natus velit omnis consequatur deleniti iusto suscipit, quod nam quasi.</p>
-                <p>Temporibus placeat consequatur non, quas eum repellat adipisci beatae dolorum qui iure. Est ea nihil nulla, reprehenderit enim quidem inventore, voluptatum accusamus consequatur neque qui eos voluptatem deserunt dicta optio?</p>
-                <p>Sapiente neque doloribus nesciunt quos perferendis dolores unde odit tempore nobis rerum voluptatem molestias sequi, ipsam sit commodi. Doloremque aliquid perspiciatis fugit blanditiis et accusantium dolorum sint corrupti non consequatur.</p>
-                <p>Expedita mollitia neque, eum laborum magnam libero, obcaecati placeat nesciunt quos deserunt molestias eaque. Maxime autem ex placeat itaque amet! Modi ducimus quas facilis placeat tempore earum sit deleniti perspiciatis.</p>
-                <p>Cum dicta dignissimos accusamus iste unde, itaque voluptates sapiente perferendis repudiandae eum necessitatibus, libero, facilis asperiores aut recusandae. In, mollitia placeat! Omnis a impedit quas itaque ut quae dolorum labore?</p>
-                <p>Ipsa voluptate quos necessitatibus repellendus neque alias, quibusdam voluptatem, eius deleniti dolor aliquam magni! Maxime quasi saepe, voluptas maiores cumque quisquam ea expedita nihil deleniti quidem, iste delectus quis nostrum.</p>
-            </section>
-            <section id="images" class="page-section">
-                <h2>Images</h2>
+                <p>The CSS was create using Tailwind and SASS and then combined using the gulp-postcss plugin for Gulp.</p>
+                <p>You can modify the generated style.css file manually or you could use the dev-dependencies to compile the styles code.</p>
+                <p>I added some comments in the stylesheets that start by CUSTOMIZE where it is important/interesting for you to modify the content of the code (for the hero image for example)</p>
+<pre><code class="scss">#hero-section {
+  /* CUSTOMIZE: here modify the name of the background image for the hero section */
+  background: url("../images/jpg/hero-mobile.jpg") no-repeat center;
+  [...]
+}</code></pre>
+
+                <h3>CSS table of content</h3>
+                <p>Use the table of content to easily search for the part you want to modify by searching for the corresponding (n.m) numbers.</p>
+<pre><code class="text">---- TABLE OF CONTENT ----
+  (1) Tailwind's reset styles
+  (2) base: Base styles (variables, generic tags...)
+  (2.1) _typography.scss: code to generate the fluid font-size variables
+  (2.2) _base.scss: Base styles for generic tags
+  (2.3) _colors.scss: colors variables, theming
+    (2.4) _fonts.scss: Font declarations
+    (2.5) _spacing.scss: Code to generate the fluid spacing variables
+(3) layout: Code that is about sections of the site and the placement of elements
+(3.1) _grid.scss: Code concerning grid patterns
+(3.2) _header.scss: Code for the page header
+    (3.3) _footer.scss: Code for the page footer
+    (4) components: Code about the smaller elements of the page (buttons, links...)
+    (4.1) _buttons.scss: Code about the button elements
+    (4.2) _links.scss: Code about the link elements
+    (4.3) _section.scss: Code about the sections of the page
+    (4.4) _sidebar.scss: Code about the sidebar
+    (4.5) _titles.scss: Code about the title elements
+    (4.6) _cards.scss: Code about the card elements
+    (4.7) _forms.scss: Code about the form elements</code></pre>
+
+    <h4>SASS folder structure</h4>
+    <p>Here's how the SASS code is structured if you need to modify it</p>
+<pre><code class="text">sass/
+│    style.scss
+│
+├─── abstracts/
+│       _functions.scss
+│       _index.scss
+│       _mixins.scss
+│       _variables.scss
+│
+├─── base/
+│       _base.scss
+│       _colors.scss
+│       _fonts.scss
+│       _index.scss
+│       _spacing.scss
+│       _typography.scss
+│
+├─── components/
+│       _buttons.scss
+│       _cards.scss
+│       _forms.scss
+│       _index.scss
+│       _links.scss
+│       _section.scss
+│       _sidebar.scss
+│       _titles.scss
+│
+└─── layout/
+_footer.scss
+_grid.scss
+_header.scss
+_index.scss</code></pre>
+  </section>
+  <section id="images" class="page-section">
+    <h2>Images</h2>
                 <p>In general, website use <code>&lt;img></code> tags for displaying images but they have the inconvenience that the images are not easily swappable for mobile versions of the site.</p>
                 <p>Swapping images for the mobile and desktop version is very important to have a website that is fast to load on mobile as mobile connections are slower to load big image files.</p>
                 <p>I used the <code>&lt;picture></code> tag and <code>&lt;source></code> tags to allow seamless swapping of the images.</p>
@@ -209,7 +255,7 @@
                 <aside>
                     <h5>Advanced way to generate webp images</h5>
                     <p>Using the node package manager (npm), you can download the dev-dependencies using <code class="command">npm install</code>.<br>
-                        Put all the images you need to convert into webp in the images/jpg and images/png folders and execute the <code class="command">npm run dev</code> command at the root of the folder.</p>
+                        Put all the images you need to convert into webp in the images/jpg and images/png folders and execute the <code class="command">npm run webp</code> command at the root of the folder.</p>
                 </aside>
             </section>
         </div>
