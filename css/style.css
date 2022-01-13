@@ -28,6 +28,14 @@ main {
     word-wrap: break-word;
     max-width: 85ch;
 }
+.page-section > aside {
+    background-color: lightblue;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.page-section > aside :last-child {
+    margin-bottom: 0;
+}
 
 @media screen and (min-width: 768px) {
     body {
