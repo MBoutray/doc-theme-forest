@@ -30,7 +30,7 @@ let changeTab = function (link) {
     currentSection.classList.add('current')
     currentSection.setAttribute('aria-hidden', false)
 
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 768 && !button.classList.contains("collapsed")) {
         button.click()
     }
     currentSection.focus()
