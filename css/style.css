@@ -5,6 +5,10 @@
 .navbar-dark .navbar-nav .nav-link {
     color: white;
 }
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    text-decoration: underline;
+}
 
 main {
     height: 100vh;
@@ -13,7 +17,7 @@ main {
 
 .page-section {
     display: none;
-    padding-top: 4rem;
+    padding-block: 4rem 2rem;
 }
 .page-section.current {
     display: block !important;
@@ -45,6 +49,7 @@ code.command {
     color: white;
     padding: 0.1rem 0.3rem;
     border-radius: 0.3rem;
+    white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -70,6 +75,6 @@ code.command {
     }
 
     .page-section {
-        padding-top: 1rem;
+        padding-block: 2rem;
     }
 }
