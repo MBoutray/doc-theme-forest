@@ -11,13 +11,22 @@ main {
     overflow: auto;
 }
 
-main > .container-fluid > section {
+.page-section {
     display: none;
     padding-top: 4rem;
 }
-
-section.current {
+.page-section.current {
     display: block !important;
+}
+.page-section > * {
+    margin-inline: auto;
+    max-width: 35rem;
+}
+.page-section > pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 85ch;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,9 +51,7 @@ section.current {
         flex-direction: column !important;
     }
 
-    main > .container-fluid > section {
+    .page-section {
         padding-top: 1rem;
-        max-width: 70ch;
-        margin-inline: auto;
     }
 }
